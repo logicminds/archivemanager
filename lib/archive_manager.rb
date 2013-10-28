@@ -7,7 +7,7 @@ require 'pathname'
 require 'rubygems'
 
 
-class ArchiveManager
+class Archivemanager
   #desc "Package management for remote repository from nexus"
 
   attr_accessor :db, :pkg, :db_dir, :db_name

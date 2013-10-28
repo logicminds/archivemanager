@@ -21,15 +21,16 @@ Examples
 
 Example native puppet type/provider  that has not been written yet
 
-```
+```puppet
 archivemanager{"freeipmi":
 	provider => 'base',
 	ensure   => 'present',
-        install_path => '/usr/local/freeipmi',
-        version => '1.3.2',
-        source_path => 'http://ftp.gnu.org/gnu/freeipmi/freeipmi-1.3.2.tar.gz',
-        package_type => 'tar.gz',
-        overwrite => 'true',
+    install_path => '/usr/local/freeipmi',
+    version => '1.3.2',
+    source_path => 'http://ftp.gnu.org/gnu/freeipmi/freeipmi-1.3.2.tar.gz',
+    package_type => 'tar.gz',
+    overwrite => 'true',
+    checksum  => '293392003ab390z0383'
 }
 
 archivemanager{"theforeman":
@@ -37,7 +38,7 @@ archivemanager{"theforeman":
 	ensure => 'present',
 	install_path => '/usr/local/freeipmi',
 	version => '1.3',
-        package_type => 'tar.gz',
+    package_type => 'tar.gz',
 	source => 'theforeman/foreman',
 }
 

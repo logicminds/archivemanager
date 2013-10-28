@@ -1,12 +1,14 @@
-require 'archive_manager'
+require 'spec_helper'
 
-describe ArchiveManager, "Package Tests" do
+
+
+describe Archivemanager, "Package Tests" do
 
   before(:all) do
     @url = 'https://github.com/logicminds/devops/archive/master.zip'
   end
   before(:each) do
-    @pack = ArchiveManager.new('/tmp/testlocation',@url)
+    @pack = Archivemanager.new('/tmp/testlocation',@url)
     @pkg = @pack.pkg
   end
   after(:each) do
