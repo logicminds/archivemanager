@@ -1,9 +1,16 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '../', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'rspec'
-require 'archive_manager'
 require 'rubygems'
 require 'rspec'
 require 'rspec/mocks'
-require 'mocha'
+require 'archivemanager'
+require 'mocha/api'
+require 'mocha/setup'
+
+
+require 'fakefs/spec_helpers'
+
+RSpec.configure do | config|
+  config.include FakeFS::SpecHelpers
+end
